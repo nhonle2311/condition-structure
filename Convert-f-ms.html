@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert-ms-f</title>
+</head>
+<body>
+    <form>
+        <label for="Met">Met</label>
+        <input type="number" id="Met" value="">
+        <button type="button" onclick="Convert()">Convert</button>
+        <div id="Result">Result:</div>
+    </form>
+<script>
+
+    function Convert(){
+        let Met = document.getElementById('Met').value;
+        let Feet = Met * 3.2808;
+        document.getElementById('Result').innerText="Result:" + Feet;
+    }
+</script>
+</body>
+</html>
