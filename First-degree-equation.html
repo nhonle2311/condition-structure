@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First degree equation</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="a">a</label>
+            <input type="number" value="" id="a">
+        </div>
+        <div>
+            <label for="b">b</label>
+            <input type="number" id="b" value="">
+        </div>
+        <button type="button" onclick="Calculate()">Calculate</button>
+        <div id="Result"></div>
+    </form>
+    <script>
+        function Calculate() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let x = -b / a;
+            document.getElementById('Result').innerText="x= " + x;
+        }
+    </script>
+</body>
+</html>

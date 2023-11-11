@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rectangular area</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="EdgeA">Edge a:</label>
+            <input type="number" id="EdgeA" value="">
+        </div>
+        <div>
+            <label for="EdgeB">Edge b:</label>
+            <input type="number" id="EdgeB" value="">
+        </div>
+        <button type="button" onclick="Calculate()">Calculate</button>
+        <div id="Result">S=</div>
+    </form>
+<script>
+    function Calculate() {
+        let a = document.getElementById('EdgeA').value;
+        let b = document.getElementById('EdgeB').value;
+        let S = (a + b) * 4;
+        document.getElementById('Result').innerText = "S= " + S;
+    }
+</script>
+</body>
+</html>

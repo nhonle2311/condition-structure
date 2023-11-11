@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>square area</title>
+</head>
+<body>
+    <form>
+
+        <label for="Edge">Edge a= <input type="text" id="Edge" value=""/></label>
+        <button type="button" onclick="Calculate()">Calculate</button>
+        <div id="Result">S=</div>
+    </form>
+<script>
+    function Calculate() {
+        let Edge = document.getElementById('Edge').value;
+        let S = Edge * 4 ;
+        document.getElementById('Result').innerText="S= " + S;
+    }
+</script>
+</body>
+</html>

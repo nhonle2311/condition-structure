@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>square triangle area</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="Edgea">Edge a</label>
+            <input type="number" id="Edgea" value=""/>
+        </div>
+        <div>
+            <label for="Edgeb">Edge b</label>
+            <input type="number" id="Edgeb" value="">
+        </div>
+        <button type="button" onclick="Calculate()">Calculate</button>
+        <div id="Result">S=</div>
+    </form>
+    <script>
+        function Calculate() {
+            let Edgea = document.getElementById('Edgea').value;
+            let Edgeb = document.getElementById('Edgeb').value;
+            let S = Edgea * Edgeb * 1 / 2;
+            document.getElementById('Result').innerText = "S= " + S;
+        }
+    </script>
+</body>
+</html>
