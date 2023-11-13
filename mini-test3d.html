@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mini-test3d</title>
+</head>
+<body>
+<div>
+    <label for="year">year</label>
+    <input type="number" value="" id="year"/><br>
+    <button type="button" onclick="calculate()">calculate</button>
+    <div id="result"></div>
+    <script>
+        let result = document.getElementById('result');
+        function calculate() {
+            let year = +document.getElementById('year').value;
+            let century = +year / 100;
+            if(century == 0){
+                result.innerText = century;
+            } else {
+                century = +year / 100 +1;
+                result.innerText = century;
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

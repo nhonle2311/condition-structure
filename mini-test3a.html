@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mini-test3</title>
+</head>
+<body>
+<form>
+    <div>
+        <label for="a">a</label>
+        <input type="number" value="" id="a">
+    </div>
+    <button type="button" onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+</form>
+    <script>
+
+        function calculate() {
+            let a = document.getElementById('a').value;
+            let S = a * a;
+            let C = a * 4
+            document.getElementById('result').innerText="S = " + S + "C= " + C;
+        }
+
+    </script>
+</body>
+</html>

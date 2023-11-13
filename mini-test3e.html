@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form>
+    <div>
+        <label for="a">a</label>
+        <input type="number" id="a" value="">
+    </div>
+    <div>
+        <label for="b">b</label>
+        <input type="number" id="b" value="">
+    </div>
+    <div>
+        <label for="c">c</label>
+        <input type="number" id="c" value="">
+    </div>
+    <button type="button" onclick="check()">check</button>
+    <div id="result"></div>
+</form>
+<script>
+    function check() {
+        const a = +document.getElementById('a').value;
+        const b = +document.getElementById('b').value;
+        const c = +document.getElementById('c').value;
+
+        const isTriangle = (a, b, c) => {
+            return a + b > c && a + c > b && b + c > a;
+        }
+
+        const isEquilateralTriangle = (a, b, c) => {
+            if (isTriangle(a, b, c)) {
+                return a === b === c;
+            }
+
+            return false
+        }
+
+        const isSquareTriangle = (a, b, c) => {
+            if (isTriangle(a, b, c)) {
+                return (a === b) || (a === c) || (b === c);
+            }
+
+            return false;
+        }
+
+        
+        let string = '';
+
+        if (isTriangle(a, b, c)) {
+            string += 'Day la tam giac';
+
+            if (isEquilateralTriangle(a, b, c)) {
+                string += 'deu';
+            } else if (isSquareTriangle(a, b, c)) {
+                string += 'can';
+            }
+
+            result.innerText = string;
+        } else {
+            result.innerText = 'Khong phai tam giac';
+        }
+
+        // let triangle = ((a + b > c) && (a + c > b) && (b + c > a) && (a > 0 ) && (b > 0 ) && (c > 0))? 'là tam giác' :
+        //     ((a * a === b * b+ c * c) || (b * b === a * a + c * c)||(c * c === a * a + b * b))? 'là tam giác vuông' :
+        //         ((a === b) || (a === c) || (b === c))? 'là tam giác cân' : ((a === b && b === c))? 'là tam giác đều' : 'không phải là tam giác';
+        // if ((a + b > c) && (a + c > b) && (b + c > a) && (a > 0 ) && (b > 0 ) && (c > 0)){
+        //     result.innerText = 'là tam giác';
+        // } else {
+        //     result.innerText = 'không phải là tam giác';
+        //     }if ((a === b && b === c)){
+        //     result.innerText = 'là tam giác đều';
+        // }
+    }
+
+
+</script>
+</body>
+</html>
