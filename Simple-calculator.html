@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple calculator</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="View" ></label>
+            <input type="text" id="View" value=""/>
+        </div>
+
+        <div>
+            <button type="button" value="1" onclick="Inputvalue(this.value)">1</button>
+            <button type="button" value="2" onclick="Inputvalue(this.value)">2</button>
+            <button type="button" value="3" onclick="Inputvalue(this.value)">3</button>
+            <button type="button" value="+" onclick="Inputvalue(this.value)">+</button>
+        </div>
+        <div>
+            <button type="button" value="4" onclick="Inputvalue(this.value)">4</button>
+            <button type="button" value="5" onclick="Inputvalue(this.value)">5</button>
+            <button type="button" value="6" onclick="Inputvalue(this.value)">6</button>
+            <button type="button" value="-" onclick="Inputvalue(this.value)">-</button>
+        </div>
+        <button type="button" value="7" onclick="Inputvalue(this.value)">7</button>
+        <button type="button" value="8" onclick="Inputvalue(this.value)">8</button>
+        <button type="button" value="9" onclick="Inputvalue(this.value)">9</button>
+        <button type="button" value="*" onclick="Inputvalue(this.value)">*</button>
+        </div>
+        <div>
+            <button type="button" value="C" onclick="Delete()">C</button>
+            <button type="button" value="0" onclick="Inputvalue(this.value)">0</button>
+            <button type="button" value="=" onclick="Result()">=</button>
+            <button type="button" value="/" onclick="Inputvalue(this.value)">/</button>
+        </div>
+    </form>
+    <script src="Simple-calculator.js"></script>
+
+</body>
+</html>
