@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate electricity prices</title>
+</head>
+<body>
+<label for="enumber">electricity number:</label>
+<input type="number" value="" id="enumber"/>
+<button type="button" onclick="calculate()">Calculate</button>
+<div id="result"></div>
+<script>
+    let result = document.getElementById('result');
+    function calculate() {
+        let a = +document.getElementById('enumber').value;
+        if (0 < a && a <= 50){
+            result.innerText = "moc1= " + a * 1.728;
+        }else if (a > 51 && a <= 100 ){
+            result.innerText='moc2= ' + a * 1786;
+        }else if(a > 101 && a <= 200){
+            result.innerText='moc3= ' + a * 2.074;
+        }else if (a > 201){
+            result.innerText='moc4= ' + a * 2.612;
+        }
+    }
+</script>
+</body>
+</html>

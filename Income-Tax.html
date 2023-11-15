@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Income Tax</title>
+</head>
+<body>
+    <label for="incom">Income</label>
+    <input type="number" value="" id="incom"/>
+    <button type="button" onclick="calculate()">Calculate</button>
+    <div id="result">Income Tax:</div>
+    <script>
+        let result = document.getElementById('result');
+        function calculate() {
+            let a = +document.getElementById('incom').value;
+            let moc1 = a * 5 / 100;
+            // moc2 ( 5_000_000 - 10_000_000) + thêm 250+000 vào thuế
+            let moc2 = (a * 10 / 100) + 250_000;
+            // moc2 ( 10_000_000 - 18_000_000) + thêm 750+000 vào thuế
+            let moc3 = (a * 15 / 100) + 750_000;
+            if(a < 5_000_000){
+                result.innerText='' + moc1;
+            }else if (a > 5_000_000 && a < 10_000_000 ){
+                result.innerText='' + moc2;
+            }else if (a > 10_000_000 && a < 18_000_000){
+                result.innerText='' + moc3;
+            }
+        }
+    </script>
+</body>
+</html>
