@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function checkNtNumber(number) {
+            let count = 0;
+            let countNt = 0;
+            for (let i = 2; i < number; i++) {
+                if (countNt < number){
+                    for (let j = 1; j <= i ; j++) {
+                        if (i % j === 0)
+                            countNt += 1
+                    }
+                    count = 0
+                }else {
+                    break;
+                }
+            }
+        }
+        let number = prompt('nguyentodautien');
+        checkNtNumber(number)
+    </script>
+</body>
+</html>
