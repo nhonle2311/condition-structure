@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        function tinhBMI(canNang, chieuCao) {
+            let chieuCaoM = chieuCao / 100;
+            let bmi = canNang / (chieuCaoM * chieuCaoM);
+
+            return bmi;
+        }
+
+        function danhGiaBMI(bmi) {
+            if (bmi < 18.5) {
+                return "Dưới cân";
+            } else if (bmi >= 18.5 && bmi < 25) {
+                return "Bình thường";
+            } else if (bmi >= 25 && bmi < 30) {
+                return "Thừa cân";
+            } else {
+                return "Béo phì";
+            }
+        }
+
+        let canNang = prompt('nhập số cân nặng')
+        let chieuCao = prompt('nhập chiều cao')
+
+        let bmi = tinhBMI(canNang, chieuCao);
+        let danhGia = danhGiaBMI(bmi);
+
+        document.write(`Chỉ số BMI của bạn là ${bmi.toFixed(2)}, được đánh giá là: ${danhGia}`);
+
+    </script>
+</body>
+</html>
